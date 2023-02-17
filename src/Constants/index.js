@@ -34,7 +34,7 @@ export const navLinks = [
   {
     id: "create",
     title: "Create",
-    link: "/create",
+    link: "/upload",
   },
 ];
 
