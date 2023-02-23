@@ -10,6 +10,14 @@
     padding-right: 30px;
   }
 }
+@media screen and (min-width: 992px) {
+  /* For desktop: */
+  .sticky-lg-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 200px;
+  }
+}
 
 .primary {
   color: #ffff;
@@ -105,9 +113,10 @@
 .text-18 {
   font-size: 18px;
 }
-
-.btn:hover {
+.btn {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn:hover {
   transform: scale(0.9);
 }
 
@@ -125,12 +134,27 @@
   padding-bottom: 100px;
 }
 
-.pulse:hover {
+.pulse {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pulse:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
 
-.dark-transparent{
+.dark-transparent {
   background: rgba(43, 43, 43, 0.7);
+}
+
+.translateX {
+  transition: transform 0.3s ease-in-out;
+}
+.translateX:hover {
+  transform: translateX(10px);
+}
+
+.formInput:focus {
+  background-color: #2b2b2b;
+  color: #fff;
 }

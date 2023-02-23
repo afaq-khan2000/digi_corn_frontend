@@ -19,7 +19,7 @@ function Form(props) {
               max="100000000"
               id="file"
               type="file"
-              className="form-control form-control-lg background-gray rounded-border paraColor"
+              className="form-control form-control-lg background-gray rounded-border paraColor formInput"
               onChange={(e) => {
                 // const objectUrl = URL.createObjectURL(e.target.files[0]);
                 // setImagePreview(objectUrl);
@@ -48,7 +48,7 @@ function Form(props) {
             <input
               id="price"
               type="number"
-              className="form-control form-control-lg background-gray rounded-border paraColor"
+              className="form-control form-control-lg background-gray rounded-border paraColor formInput"
             />
           </div>
           <div className="form-group">
@@ -58,7 +58,7 @@ function Form(props) {
             <input
               id="name"
               type="text"
-              className="form-control form-control-lg background-gray rounded-border paraColor"
+              className="form-control form-control-lg background-gray rounded-border paraColor formInput"
             />
           </div>
           <div className="form-group">
@@ -68,7 +68,7 @@ function Form(props) {
             <textarea
               id="description"
               rows={4}
-              className="form-control form-control-lg background-gray rounded-border paraColor"
+              className="form-control form-control-lg background-gray rounded-border paraColor formInput"
             />
           </div>
           <button className="btn btn-lg background-secondary rounded-pill px-5 py-2 text-white">
@@ -83,13 +83,13 @@ function Form(props) {
               <img
                 src={imagePreview}
                 alt="Preview"
-                className="img-fluid rounded-border"
+                className="img-fluid rounded-border sticky-lg-top"
               />
             ) : (
               <video
                 controls
                 ref={videoRef}
-                className="img-fluid rounded-border"
+                className="img-fluid rounded-border sticky-lg-top"
               >
                 <source src={imagePreview} type="video/mp4" />
                 Your browser does not support the video tag.
@@ -97,7 +97,7 @@ function Form(props) {
             )
           ) : (
             <div
-              className="background-gray rounded-border text-center pt-10"
+              className="background-gray rounded-border text-center pt-10 sticky-lg-top"
               style={{ height: "400px" }}
             >
               <p className="paraColor">
@@ -105,22 +105,6 @@ function Form(props) {
               </p>
             </div>
           )}
-          {/* {imagePreview ? (
-            <img
-              src={imagePreview}
-              alt=""
-              className="img-fluid rounded-border"
-            />
-          ) : (
-            <div
-              className="background-gray rounded-border text-center pt-10"
-              style={{ height: "400px" }}
-            >
-              <p className="paraColor">
-                Upload file to preview your brand new NFT
-              </p>
-            </div>
-          )} */}
         </div>
       </div>
     </>
