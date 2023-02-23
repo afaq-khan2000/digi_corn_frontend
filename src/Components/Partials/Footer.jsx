@@ -14,8 +14,8 @@ function Footer(props) {
       <div className="col-12 col-md-6 col-lg-4">
         <h3 className="font-clash">Explore</h3>
         {navLinks.map((link) => (
-          <Link to={link.link}>
-            <p className="paraColor h5 my-4">{link.title}</p>
+          <Link to={link.link} style={{textDecoration:"none"}}>
+            <p className="paraColor h5 my-4 pulse">{link.title}</p>
           </Link>
         ))}
       </div>

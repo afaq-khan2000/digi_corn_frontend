@@ -24,8 +24,8 @@ function Navbar(props) {
           <ul className="navbar-nav mx-auto">
             {navLinks.map((link) => (
               <li className="nav-item">
-                <Link className="nav-link text-white mx-4" to={`${link.link}`}>
-                  {link.title} <span className="sr-only">(current)</span>
+                <Link className="nav-link text-white mx-4 pulse" to={`${link.link}`}>
+                  {link.title}
                 </Link>
               </li>
             ))}
