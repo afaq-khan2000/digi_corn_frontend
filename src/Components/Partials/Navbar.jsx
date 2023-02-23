@@ -29,7 +29,7 @@ function Navbar(props) {
                 </Link>
               </li>
             ))}
-            <button className="btn background-secondary rounded-pill px-5 py-2">
+            <button className="btn background-secondary rounded-pill px-5 py-2 text-white">
               Connect Wallet
             </button>
           </ul>

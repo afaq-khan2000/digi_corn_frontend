@@ -71,6 +71,9 @@ function Form(props) {
               className="form-control form-control-lg background-gray rounded-border paraColor"
             />
           </div>
+          <button className="btn btn-lg background-secondary rounded-pill px-5 py-2 text-white">
+            Create
+          </button>
         </div>
         <div className="col-12 col-lg-5 order-first order-lg-2">
           <p className="font-clash h3">Preview</p>
