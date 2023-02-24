@@ -12,7 +12,8 @@ import profile1 from './profile1.png';
 import profile2 from './profile2.png';
 import profile3 from './profile3.png';
 import wallet from './wallet.png';
-import logo from './logo.svg';
+import logo from './logo-no-background.png';
+import second_logo from './logo-white.png';
 import menu from './menu.svg';
 import cross from './cross.svg';
 import sale from './sale.svg';
@@ -29,5 +30,5 @@ import Wand from './Wand.svg';
 
 
 export{
-    bg, hero, img1,  img3, img4, img5, wallet, logo, sale, upload, WalletIco, menu, cross, profile, profile1, profile2, profile3, Basketball, crypto, brush, Camera, Music, Planet, Swatches, Video, Wand, img2, banner
+    bg, hero, img1,  img3, img4, img5, wallet, logo, second_logo,sale, upload, WalletIco, menu, cross, profile, profile1, profile2, profile3, Basketball, crypto, brush, Camera, Music, Planet, Swatches, Video, Wand, img2, banner
 }

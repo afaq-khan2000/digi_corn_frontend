@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { logo, second_logo } from "../../Asset";
 import { navLinks } from "../../Constants";
 
 function Footer(props) {
   return (
     <div className="row background-gray paddingX text-white w-100 paddingX py-5 mx-auto">
       <div className="col-12 col-md-6 col-lg-4">
-        <h3 className="font-clash">Digi-Corn</h3>
+        <img src={logo} alt="" width={"200px"} className="img-fluid mb-3"/>
+        {/* <h3 className="font-clash">Digi-Corn</h3> */}
         <p className="paraColor h5">
           A marketplace where you can sell and buy Nfts
         </p>

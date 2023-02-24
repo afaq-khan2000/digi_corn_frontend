@@ -7,8 +7,8 @@ function Navbar(props) {
   return (
     <div className="sticky-top">
       <nav className="pt-3 navbar navbar-expand-lg navbar-light background-dark paddingX">
-        {/* <img src={logo} alt="" /> */}
-        <h1 className="font-clash text-white">Digi-Corn</h1>
+        <img src={logo} alt="" width={"200px"} className="img-fluid"/>
+        {/* <h1 className="font-clash text-white">Digi-Corn</h1> */}
         <button
           className="navbar-toggler"
           type="button"
