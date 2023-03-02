@@ -5,9 +5,11 @@ import { navLinks } from "../../Constants";
 
 function Navbar(props) {
   return (
-    <div className="sticky-top">
+    <div className="sticky-top w-100 mx-auto">
       <nav className="pt-3 navbar navbar-expand-lg navbar-light background-dark paddingX">
-        <img src={logo} alt="" width={"200px"} className="img-fluid"/>
+        <Link to={"/"}>
+          <img src={logo} alt="" width={"200px"} className="img-fluid pulse" />
+        </Link>
         {/* <h1 className="font-clash text-white">Digi-Corn</h1> */}
         <button
           className="navbar-toggler"
@@ -24,7 +26,10 @@ function Navbar(props) {
           <ul className="navbar-nav mx-auto">
             {navLinks.map((link) => (
               <li className="nav-item">
-                <Link className="nav-link text-white mx-4 pulse" to={`${link.link}`}>
+                <Link
+                  className="nav-link text-white mx-4 pulse"
+                  to={`${link.link}`}
+                >
                   {link.title}
                 </Link>
               </li>

@@ -22,6 +22,7 @@ export const navLinks = [
   {
     id: "marketplace",
     title: "Marketplace",
+    link: "/explore",
   },
   {
     id: "collection",
@@ -57,6 +58,41 @@ export const stats = [
 ];
 
 export const cardData = [
+  {
+    name: "Distant Galaxy",
+    image: img1,
+    profile: profile,
+    currency: crypto,
+    user: "Spaceone",
+  },
+  {
+    name: "Life On Edena",
+    image: img5,
+    profile: profile1,
+    currency: crypto,
+    user: "NebulaKid",
+  },
+  {
+    name: "AstroFiction",
+    image: img3,
+    profile: profile2,
+    currency: crypto,
+    user: "MoonDancer",
+  },
+  {
+    name: "Distant Galaxy",
+    image: img4,
+    profile: profile3,
+    currency: crypto,
+    user: "Spaceone ",
+  },
+  {
+    name: "AstroFiction",
+    image: img5,
+    profile: profile1,
+    currency: crypto,
+    user: "MoonDancer ",
+  },
   {
     name: "Distant Galaxy",
     image: img1,

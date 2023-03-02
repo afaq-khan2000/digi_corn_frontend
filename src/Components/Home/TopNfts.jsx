@@ -17,7 +17,7 @@ function TopNfts(props) {
         </div>
       </div>
       <div className="row mt-5">
-        {cardData.map((nft) => (
+        {cardData.slice(0,9).map((nft) => (
           <div className="col-12 col-md-6 col-lg-4 my-3">
             <Card nft={nft} />
           </div>

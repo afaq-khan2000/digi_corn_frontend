@@ -7,7 +7,7 @@ function Form(props) {
 
   return (
     <>
-      <h1 className="font-clash text-67 text-white">Upload an NFT</h1>
+      <h1 className="font-clash text-67 text-white">Upload an <span className="text-gradient">NFT</span></h1>
       <div className="row text-white mt-5">
         <div className="col-12 col-lg-7">
           <div className="form-group">
