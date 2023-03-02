@@ -5,7 +5,7 @@ import Search from "./Search";
 
 function Results(props) {
   return (
-    <div className="col-12 col-lg-9 px-3">
+    <div className="col-12 col-lg-9 px-0 px-lg-3">
       <div className="row">
         {cardData.map((nft) => (
           <div className="col-12 col-md-6 col-lg-4 mb-4">
