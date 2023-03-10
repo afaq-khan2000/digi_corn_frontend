@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { cardData } from "../../Constants";
 import { Card } from "../Partials";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import nftService from '../../services/NftsService'
 
 function TrendingNfts(props) {
+
+  const [nfts, setNfts] = useState([]);
+
+useEffect(() => {
+  nftService.getAllNfts().then((res)=>setNfts(res.nfts)).catch((err)=>console.log(err))
+}, [])
+
+
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -41,7 +51,7 @@ function TrendingNfts(props) {
         itemClass="carousel-item-padding-40-px"
         className="mt-5"
       >
-        {cardData.map((nft) => (
+        {nfts.map((nft) => (
           <div className="col-4 my-3">
             <Card nft={nft} />
           </div>

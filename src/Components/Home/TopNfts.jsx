@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { cardData } from "../../Constants";
+import nftService from "../../services/NftsService";
 import { Card } from "../Partials";
 
 function TopNfts(props) {
+
+  const [nfts, setNfts] = useState([]);
+
+  useEffect(() => {
+    nftService.getAllNfts().then((res)=>setNfts(res.nfts)).catch((err)=>console.log(err))
+  }, [])
+
   return (
     <div className="text-white mt-10">
       <div className="row">
@@ -17,7 +25,7 @@ function TopNfts(props) {
         </div>
       </div>
       <div className="row mt-5">
-        {cardData.slice(0,9).map((nft) => (
+        {nfts.slice(0,9).map((nft) => (
           <div className="col-12 col-md-6 col-lg-4 my-3">
             <Card nft={nft} />
           </div>
