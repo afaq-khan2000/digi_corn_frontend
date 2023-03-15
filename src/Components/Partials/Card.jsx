@@ -8,7 +8,7 @@ function Card({ nft }) {
     <div>
       <div
         className="card background-gray p-3 rounded-border text-white pulse"
-        style={{ width: "20rem" }}
+        style={{ width: "100%"}}
       >
         <img
           className="card-img-top rounded img-fluid"

@@ -52,7 +52,7 @@ useEffect(() => {
         className="mt-5"
       >
         {nfts.map((nft) => (
-          <div className="col-4 my-3">
+          <div className="col-12 my-3">
             <Card nft={nft} />
           </div>
         ))}
