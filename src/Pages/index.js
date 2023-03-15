@@ -5,5 +5,15 @@ import Marketplace from "./Marketplace";
 import ConnectWallet from "./ConnectWallet";
 import SignUp from "./SignUp";
 import Login from "./Login";
+import Profile from "./Profile";
 
-export { Home, NftPage, UploadNft, Marketplace, ConnectWallet, SignUp, Login };
+export {
+  Home,
+  NftPage,
+  UploadNft,
+  Marketplace,
+  ConnectWallet,
+  SignUp,
+  Login,
+  Profile,
+};
