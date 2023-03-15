@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { logo, user } from "../../Asset";
-import { Base_URL } from "../../config";
+import { Base_URL } from "../../url";
 import { navLinks } from "../../Constants";
 import userService from "../../services/UserService";
 

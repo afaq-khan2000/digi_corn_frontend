@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Base_URL } from "../config";
+import { Base_URL } from "../url";
 // axios.defaults.baseURL = Base_URL;
 axios.defaults.baseURL = Base_URL;
 // axios.defaults.baseURL = "https://digicornbackendfinal-production.up.railway.app/";

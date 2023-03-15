@@ -1,7 +1,7 @@
 import React from "react";
 import { topNFTs, cardData } from "../../Constants";
 import { crypto } from "../../Asset/index";
-import { Base_URL } from "../../config";
+import { Base_URL } from "../../url";
 
 function Card({ nft }) {
   return (

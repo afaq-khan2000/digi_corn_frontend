@@ -3,7 +3,7 @@ import { user } from "../../Asset";
 import { Pencil } from "react-bootstrap-icons";
 import userService from "../../services/UserService";
 import { success } from "../../utils/notification";
-import {Base_URL} from '../../config';
+import {Base_URL} from '../../url';
 
 function Form(props) {
   const [id, setId] = useState("");
