@@ -1,7 +1,6 @@
 import React from "react";
 import { topNFTs, cardData } from "../../Constants";
 import { crypto } from "../../Asset/index";
-import { Base_URL } from "../../config";
 
 function Card({ nft }) {
   return (
@@ -12,7 +11,7 @@ function Card({ nft }) {
       >
         <img
           className="card-img-top rounded img-fluid"
-          src={`${Base_URL}uploads/${nft?.file}`}
+          src={`http://localhost:4000/uploads/${nft?.file}`}
           alt="Card image cap"
         />
         <div className="card-body p-0">

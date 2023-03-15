@@ -4,12 +4,11 @@ class NftsService extends GenericService {
     super();
   }
 
-  createNft = ({ name, price, description, file, owner }) =>
+  createNft = ({ name, price, description, file }) =>
     new Promise((resolve, reject) => {
       const formData = new FormData();
       formData.append("file", file);
       formData.append("name", name);
-      formData.append("owner", owner);
       formData.append("price", price);
       formData.append("description", description);
 

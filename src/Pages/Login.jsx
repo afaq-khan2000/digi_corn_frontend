@@ -1,14 +1,11 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { login, logo, register } from "../Asset";
 import userService from "../services/UserService";
-import { failure, success } from "../utils/notification";
 
 function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const navigate = useNavigate();
 
   return (
     <div className="paddingX background-dark pb-10 w-100 mx-auto">
@@ -17,14 +14,12 @@ function Login(props) {
           onSubmit={(e) => {
             e.preventDefault();
             userService
-              .login({ email, password })
+              .login({email, password})
               .then((data) => {
-                success("Successful Login").then(
-                  () => (window.location.href = "/")
-                );
+                window.location.href = "/";
               })
               .catch((err) => {
-                failure(err.response.data.message);
+               console.log(err);
               });
           }}
         >
@@ -40,7 +35,7 @@ function Login(props) {
                       <img
                         src={login}
                         alt="login form"
-                        className="img-fluid"
+                        className="img-fluid h-100"
                         style={{ borderRadius: "1rem 0 0 1rem" }}
                       />
                     </div>
@@ -54,8 +49,7 @@ function Login(props) {
                           className="fw-normal mb-3 pb-3 font-clash h4"
                           style={{ letterSpacing: "1px" }}
                         >
-                          <span className="text-gradient">Sign</span> into your
-                          account
+                          <span className="text-gradient">Sign</span> into your account
                         </h5>
 
                         <div className="form-outline mb-4">

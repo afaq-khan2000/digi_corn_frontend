@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import nftService from "../../services/NftsService";
-import userService from "../../services/UserService";
 import { success } from "../../utils/notification";
 
 function Form(props) {
@@ -13,13 +12,7 @@ function Form(props) {
 
   const handleAdd = () => {
     nftService
-      .createNft({
-        name,
-        price,
-        description,
-        file,
-        owner: userService.getLoggedInUser().id,
-      })
+      .createNft({ name, price, description, file })
       .then((res) => {
         success(res);
       })

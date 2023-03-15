@@ -1,16 +1,14 @@
 import Swal from "sweetalert2";
 
 export const success = (message) => {
-  return new Promise((resolve) => {
-    Swal.fire({
-      title: `Success!`,
-      text: `${message.toUpperCase()}`,
-      icon: "success",
-      confirmButtonColor: "#000000",
-      allowOutsideClick: false, // Prevents dismissing the dialog by clicking outside of it
-    }).then(() => {
-      resolve(); // Resolves the Promise when the user clicks the "OK" button
-    });
+  Swal.fire({
+    title: `Success!`,
+    text: `${message.toUpperCase()}`,
+    icon: "success",
+    button: "OK",
+    confirmButtonColor: "#000000",
+  }).then(() => {
+    window.location.href = "/";
   });
 };
 

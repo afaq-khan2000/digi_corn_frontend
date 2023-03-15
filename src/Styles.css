@@ -68,7 +68,7 @@
   background-color: #24ff00;
 }
 .background-blue {
-  background-color: rgba(5, 0, 255, 0.33);
+  background-color: rgba(5,0,255,0.33);
 }
 .background-gray {
   background-color: #3b3b3b;
@@ -168,12 +168,12 @@
   background-color: #2b2b2b;
   color: #fff;
 }
-input[type="radio"] {
+input[type='radio'] {
   accent-color: #3b3b3b;
 }
 
-.filters {
-  border: 1px solid #3b3b3b;
+.filters{
+border: 1px solid #3b3b3b;
 }
 .dropdown-toggle::after {
   display: none;
@@ -187,23 +187,10 @@ input[type="radio"] {
 
 .dropdown-item {
   color: #fff;
+  
 }
 
 .dropdown-item:hover {
   color: #fff;
   background-color: #2b2b2b;
-}
-
-.sidebar-links {
-  text-decoration: none;
-  margin-top: 20px;
-}
-
-.sidebar-links:hover {
-  color: #858584;
-  text-decoration: none;
-}
-
-.pointer:hover {
-  cursor: pointer;
 }
