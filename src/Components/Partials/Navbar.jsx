@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { logo, user } from "../../Asset";
+import { Base_URL } from "../../config";
 import { navLinks } from "../../Constants";
 import userService from "../../services/UserService";
 
@@ -8,9 +9,13 @@ function Navbar(props) {
   const navigate = useNavigate();
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [pic, setPic] = useState("");
 
   useEffect(() => {
     setIsLoggedIn(userService.isLoggedIn());
+    userService.getProfile().then((res) => {
+      setPic(res.user.pic);
+    });
   }, []);
 
   return (
@@ -28,7 +33,7 @@ function Navbar(props) {
               aria-expanded="false"
             >
               <img
-                src={user}
+                src={`${Base_URL}uploads/users/${pic}`}
                 alt=""
                 width={"40px"}
                 height={"40px"}
@@ -37,7 +42,7 @@ function Navbar(props) {
               />
             </Link>
             <div className="dropdown-menu" aria-labelledby="profile-dropdown">
-              <Link className="dropdown-item" to="#">
+              <Link className="dropdown-item" to="/profile">
                 My Profile
               </Link>
               <Link className="dropdown-item" to="#">
@@ -96,6 +101,12 @@ function Navbar(props) {
               </li>
             ))}
 
+            <Link to={"/connect-wallet"}>
+              <button className="btn btn-sm background-gray rounded-pill px-4 py-2 text-white mx-3 my-2 my-lg-0">
+                Connect Wallet
+              </button>
+            </Link>
+
             {isLoggedIn ? (
               <li className="nav-item d-none d-lg-block">
                 <div className="dropdown">
@@ -109,7 +120,7 @@ function Navbar(props) {
                     aria-expanded="false"
                   >
                     <img
-                      src={user}
+                      src={`${Base_URL}uploads/users/${pic}`}
                       alt=""
                       width={"40px"}
                       height={"40px"}
@@ -121,7 +132,7 @@ function Navbar(props) {
                     className="dropdown-menu"
                     aria-labelledby="profile-dropdown"
                   >
-                    <Link className="dropdown-item" to="#">
+                    <Link className="dropdown-item" to="/profile">
                       My Profile
                     </Link>
                     <Link className="dropdown-item" to="#">
@@ -153,12 +164,6 @@ function Navbar(props) {
                 </Link>
               </>
             )}
-
-            <Link to={"/connect-wallet"}>
-              <button className="btn btn-sm background-gray rounded-pill px-4 py-2 text-white mx-3 my-2 my-lg-0">
-                Connect Wallet
-              </button>
-            </Link>
           </ul>
         </div>
       </nav>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { logo, register } from "../Asset";
 import userService from "../services/UserService";
-import { success } from "../utils/notification";
+import { failure, success } from "../utils/notification";
 
 function SignUp(props) {
   const [name, setName] = useState("");
@@ -20,7 +20,7 @@ function SignUp(props) {
                 success(data.message);
               })
               .catch((err) => {
-                console.log(err);
+                failure(err.response.data.message);
               });
           }}
         >
