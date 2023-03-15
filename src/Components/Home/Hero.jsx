@@ -3,7 +3,7 @@ import { hero } from "../../Asset";
 
 function Hero(props) {
   return (
-    <div className="row pt-10" style={{minHeight:"100vh"}}>
+    <div className="row py-5">
       <div className="col-12 col-md-6 col-lg-8 text-white">
         <h1 className="font-clash text-67 d-none d-md-block">
           Discover digital art & Collect{" "}

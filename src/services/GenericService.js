@@ -1,10 +1,9 @@
 import axios from "axios";
-import { Base_URL } from "../config";
+// import { Base_URL } from "../config";
 // axios.defaults.baseURL = Base_URL;
-axios.defaults.baseURL = Base_URL;
-// axios.defaults.baseURL = "https://digicornbackendfinal-production.up.railway.app/";
-axios.defaults.headers.common["x-auth-token"] =
-  localStorage.getItem("digicorntoken");
+// axios.defaults.baseURL = "http://localhost:4000/";
+axios.defaults.baseURL = "https://digicornbackendfinal-production.up.railway.app/";
+// axios.defaults.headers.common["x-auth-token"] = localStorage.getItem("digicorntoken");
 class GenericService {
   constructor() {}
   get = (url) =>
