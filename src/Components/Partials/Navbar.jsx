@@ -4,6 +4,7 @@ import { logo, user } from "../../Asset";
 import { Base_URL } from "../../url";
 import { navLinks } from "../../Constants";
 import userService from "../../services/UserService";
+import { Heart, HeartFill } from "react-bootstrap-icons";
 
 function Navbar(props) {
   const navigate = useNavigate();
@@ -164,6 +165,12 @@ function Navbar(props) {
                 </Link>
               </>
             )}
+             <Link to={"/favorites"}>
+              <button className="btn btn-sm background-gray rounded-pill px-4 py-2 text-white mx-3 my-2 my-lg-0">
+               
+                <HeartFill color="#FF5733"/>
+              </button>
+            </Link>
           </ul>
         </div>
       </nav>

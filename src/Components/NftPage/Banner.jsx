@@ -1,12 +1,13 @@
 import React from "react";
 import { cardData } from "../../Constants";
+import { Base_URL } from "../../url";
 
-function Banner(props) {
+function Banner({ nft }) {
   return (
     <div
       className="text-white img-fluid"
       style={{
-        backgroundImage: `url(${cardData[2].image})`,
+        backgroundImage: `url("${Base_URL}uploads/${nft?.file}")`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
@@ -22,8 +23,20 @@ function Banner(props) {
           left: "100px",
         }}
       >
-        <h1 className="font-clash">{cardData[2].name}</h1>
-        <p className="">Minted on Sep 30, 2022</p>
+        <h1 className="font-clash">{nft?.name}</h1>
+        <p className="">
+          Minted on{" "}
+          {new Date(nft.date).toLocaleDateString("en-US", {
+            timeZone: "Asia/Karachi",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+            second: "numeric",
+            hour12: true,
+          })}
+        </p>
       </div>
       <div
         className="dark-transparent text-center py-5 px-2 d-block d-lg-none img-fluid"

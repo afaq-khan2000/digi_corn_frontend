@@ -6,6 +6,7 @@ import ConnectWallet from "./ConnectWallet";
 import SignUp from "./SignUp";
 import Login from "./Login";
 import Profile from "./Profile";
+import FavoritesPage from './FavoritesPage';
 
 export {
   Home,
@@ -16,4 +17,5 @@ export {
   SignUp,
   Login,
   Profile,
+  FavoritesPage
 };

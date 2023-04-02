@@ -10,6 +10,7 @@ import {
   Profile,
   SignUp,
   UploadNft,
+  FavoritesPage,
 } from "./Pages";
 import { Navbar, Footer } from "./Components/Partials";
 
@@ -27,6 +28,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/connect-wallet" element={<ConnectWallet />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
+        <Route path="/nft/:id" element={<NftPage />} />
       </Routes>
 
       <Footer />

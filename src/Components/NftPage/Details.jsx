@@ -1,17 +1,17 @@
 import React from "react";
 
-function Details(props) {
+function Details({nft}) {
+
+  console.log(nft);
+
   return (
     <div className="row text-white pt-10 pb-10">
       <div className="col-12 col-lg-8">
         <p className="font-clash h4 paraColor">Created By</p>
-        <p className="h3">Orbitans</p>
+        <p className="h3">{nft?.owner?.name}</p>
         <p className="font-clash h4 paraColor">Description</p>
         <p className="h6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum aut
-          eveniet fugit debitis esse at. Voluptate doloremque, harum deleniti
-          tenetur ad optio non. Sapiente est amet impedit dolore? Modi,
-          consequuntur!
+         {nft?.description}
         </p>
         <p className="font-clash h4 paraColor">Details</p>
         <p className="h6">
